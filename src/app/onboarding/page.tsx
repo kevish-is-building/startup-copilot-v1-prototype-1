@@ -100,6 +100,35 @@ export default function OnboardingPage() {
     }
   }, [session, isPending, router]);
 
+  // Check if user has already completed onboarding
+  useEffect(() => {
+    const checkOnboardingStatus = async () => {
+      if (session?.user) {
+        try {
+          const token = localStorage.getItem("bearer_token");
+          const response = await fetch("/api/startups", {
+            headers: {
+              Authorization: `Bearer ${token}`,
+            },
+          });
+          if (response.ok) {
+            const startups = await response.json();
+            const hasCompletedOnboarding = startups.some((s: any) => s.onboardingCompleted);
+            if (hasCompletedOnboarding) {
+              router.push("/dashboard");
+            }
+          }
+        } catch (error) {
+          console.error("Failed to check onboarding status", error);
+        }
+      }
+    };
+
+    if (!isPending && session?.user) {
+      checkOnboardingStatus();
+    }
+  }, [session, isPending, router]);
+
   // Pre-fill name from session
   useEffect(() => {
     if (session?.user?.name && !formData.fullName) {
@@ -234,37 +263,6 @@ export default function OnboardingPage() {
         const error = await startupResponse.json();
         throw new Error(error.error || "Failed to create startup");
       }
-
-      const startup = await startupResponse.json();
-
-      // Generate blueprint
-      const blueprintResponse = await fetch("/api/blueprints", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          Authorization: `Bearer ${token}`,
-        },
-        body: JSON.stringify({
-          startupId: startup.id,
-        }),
-      });
-
-      if (!blueprintResponse.ok) {
-        const error = await blueprintResponse.json();
-        throw new Error(error.error || "Failed to generate blueprint");
-      }
-
-      // Mark onboarding as completed
-      await fetch(`/api/startups/${startup.id}`, {
-        method: "PUT",
-        headers: {
-          "Content-Type": "application/json",
-          Authorization: `Bearer ${token}`,
-        },
-        body: JSON.stringify({
-          onboardingCompleted: true,
-        }),
-      });
 
       toast.success("Your personalized blueprint is ready!");
       router.push("/dashboard");

@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { prisma } from '@/lib/prisma';
 import { auth } from '@/lib/auth';
+import { generateBlueprint } from '@/lib/blueprint-generator';
 
 const VALID_INDUSTRIES = ['food', 'saas', 'consumer', 'healthcare', 'fintech', 'edtech'];
 const VALID_STAGES = ['ideation', 'mvp', 'growth'];
@@ -118,6 +119,18 @@ export async function POST(request: NextRequest) {
       }
     }
 
+    const startupDataForBlueprint = {
+      startupName,
+      industry,
+      stage,
+      domainPurchased: domainPurchased ?? false,
+      trademarkCompleted: trademarkCompleted ?? false,
+      entityRegistered: entityRegistered ?? false,
+      goals: goals
+    };
+
+    const blueprintContent = generateBlueprint(startupDataForBlueprint, foundingTeamData);
+
     const newStartup = await prisma.startup.create({
       data: {
         userId: session.user.id,
@@ -130,12 +143,18 @@ export async function POST(request: NextRequest) {
         trademarkCompleted: trademarkCompleted ?? false,
         entityRegistered: entityRegistered ?? false,
         goals: JSON.stringify(goals),
-        onboardingCompleted: false,
+        onboardingCompleted: true,
         foundingTeam: {
-          create: foundingTeamData.map(member => ({
+          create: foundingTeamData.map((member: any) => ({
             name: member.name.trim(),
             skills: JSON.stringify(member.skills),
           }))
+        },
+        blueprints: {
+          create: {
+            content: JSON.stringify(blueprintContent),
+            generatedAt: new Date(),
+          }
         }
       },
       include: {

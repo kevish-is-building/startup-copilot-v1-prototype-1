@@ -131,6 +131,9 @@ export default function Header() {
                 <DropdownMenuItem asChild>
                   <Link href="/blueprint">My Blueprint</Link>
                 </DropdownMenuItem>
+                <DropdownMenuItem asChild>
+                  <Link href="/profile">Profile</Link>
+                </DropdownMenuItem>
                 <DropdownMenuSeparator />
                 <DropdownMenuItem
                   onClick={handleSignOut}
@@ -203,6 +206,12 @@ export default function Header() {
                     <User className="h-4 w-4 text-gray-500" />
                     <span className="text-gray-700">{session.user.name}</span>
                   </div>
+                  <Link href="/profile" onClick={() => setMobileMenuOpen(false)}>
+                    <Button variant="ghost" size="sm" className="w-full justify-start gap-2 mb-2">
+                      <User className="h-4 w-4" />
+                      Profile
+                    </Button>
+                  </Link>
                   <Button
                     variant="ghost"
                     size="sm"
