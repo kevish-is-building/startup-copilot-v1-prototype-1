@@ -1535,7 +1535,7 @@ Date: ______________________________`
             <p className="text-sm text-blue-900">
               <strong>📄 Note:</strong> These are sample templates for demonstration purposes. 
               Always have legal documents reviewed by qualified professionals before use. Templates 
-              are downloaded as text files for this prototype.
+              are downloaded as PDF files.
             </p>
           </CardContent>
         </Card>

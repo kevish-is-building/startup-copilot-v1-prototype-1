@@ -51,7 +51,7 @@ A fully functional Next.js application that helps founders go from idea to execu
   - SAFE Agreement
   - Employee Offer Letter
   - NDA
-  - Download as text files (Blob URLs)
+  - Download as PDF files
 
 - **Playbook** - Expert articles covering:
   - Product strategy
