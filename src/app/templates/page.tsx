@@ -3,11 +3,11 @@
 import { useState, useEffect } from 'react';
 import { FileText, Search, Loader2 } from 'lucide-react';
 import Header from '../../components/Header';
-import TemplateCard from '@/components/TemplateCard';
+import TemplateCard from '../../components/TemplateCard';
 import { Card, CardContent } from '../../components/ui/card';
-import { Input } from '@/components/ui/input';
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
-import { Template } from '@/lib/types';
+import { Input } from '../../components/ui/input';
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '../../components/ui/select';
+import { Template } from '../../lib/types';
 import { useSession } from '../../lib/auth-client';
 
 // Static templates data - Standard legal templates provided to all users

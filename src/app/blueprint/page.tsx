@@ -6,7 +6,7 @@ import { ChevronDown, ChevronUp, Loader2 } from "lucide-react";
 import Header from "../../components/Header";
 import { Card, CardContent, CardHeader, CardTitle } from "../../components/ui/card";
 import { Button } from "../../components/ui/button";
-import { Checkbox } from "@/components/ui/checkbox";
+import { Checkbox } from "../../components/ui/checkbox";
 import { useSession } from "../../lib/auth-client";
 import { toast } from "sonner";
 

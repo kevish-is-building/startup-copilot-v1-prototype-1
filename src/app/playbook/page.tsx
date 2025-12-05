@@ -3,11 +3,11 @@
 import { useEffect, useState } from 'react';
 import { BookOpen, Search } from 'lucide-react';
 import Header from '../../components/Header';
-import PlaybookCard from '@/components/PlaybookCard';
+import PlaybookCard from '../../components/PlaybookCard';
 import { Card, CardContent } from '../../components/ui/card';
-import { Input } from '@/components/ui/input';
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
-import { PlaybookArticle } from '@/lib/types';
+import { Input } from '../../components/ui/input';
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '../../components/ui/select';
+import { PlaybookArticle } from '../../lib/types';
 
 export default function PlaybookPage() {
   const [loading, setLoading] = useState(true);

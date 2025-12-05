@@ -3,7 +3,7 @@ import "./globals.css";
 import VisualEditsMessenger from "../visual-edits/VisualEditsMessenger";
 import ErrorReporter from "../components/ErrorReporter";
 import Script from "next/script";
-import { Toaster } from "@/components/ui/sonner";
+import { Toaster } from "../components/ui/sonner";
 
 export const metadata: Metadata = {
   title: "Startup CoPilot - From Idea to Execution in 90 Days",

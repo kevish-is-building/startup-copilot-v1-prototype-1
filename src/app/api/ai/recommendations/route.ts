@@ -1,7 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server';
-import { getGeminiModel, isGeminiConfigured } from '@/lib/gemini';
-import { buildPersonalizationPrompt } from '@/lib/prompts';
-import type { UserProfile, AIRecommendationResponse, ContentRecommendation } from '@/lib/types/ai';
+import { getGeminiModel, isGeminiConfigured } from '../../../../lib/gemini';
+import { buildPersonalizationPrompt } from '../../../../lib/prompts';
+import type { UserProfile, AIRecommendationResponse, ContentRecommendation } from '../../../../lib/types/ai';
 
 export async function POST(request: NextRequest) {
   try {

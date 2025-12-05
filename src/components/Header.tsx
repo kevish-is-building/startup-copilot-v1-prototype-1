@@ -12,8 +12,8 @@ import {
   DropdownMenuLabel,
   DropdownMenuSeparator,
   DropdownMenuTrigger,
-} from "@/components/ui/dropdown-menu";
-import { authClient, useSession } from "../../lib/auth-client";
+} from "../components/ui/dropdown-menu";
+import { authClient, useSession } from "../lib/auth-client";
 import { toast } from "sonner";
 
 const navItems = [
