@@ -32,7 +32,7 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 import { Checkbox } from "@/components/ui/checkbox";
-import { useSession } from "@/lib/auth-client";
+import { useSession } from "../../lib/auth-client";
 import { toast } from "sonner";
 
 const steps = ["Basics", "Founders", "Team Details", "Progress", "Goals", "Review"];

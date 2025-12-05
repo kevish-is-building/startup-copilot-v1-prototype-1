@@ -5,7 +5,7 @@ import { BookOpen, Clock, ArrowRight } from 'lucide-react';
 import { PlaybookArticle } from '@/lib/types';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from './ui/card';
 import { Button } from './ui/button';
-import { Badge } from '@/components/ui/badge';
+import { Badge } from '../../components/ui/badge';
 
 interface PlaybookCardProps {
   article: PlaybookArticle;

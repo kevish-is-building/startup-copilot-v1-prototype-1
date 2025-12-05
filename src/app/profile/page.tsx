@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react";
 import { useRouter } from "next/navigation";
-import { useSession } from "@/lib/auth-client";
+import { useSession } from "../../lib/auth-client";
 import Header from "../../components/Header";
 import { Button } from "../../components/ui/button";
 import { Input } from "@/components/ui/input";

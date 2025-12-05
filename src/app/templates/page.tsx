@@ -8,7 +8,7 @@ import { Card, CardContent } from '../../components/ui/card';
 import { Input } from '@/components/ui/input';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
 import { Template } from '@/lib/types';
-import { useSession } from '@/lib/auth-client';
+import { useSession } from '../../lib/auth-client';
 
 // Static templates data - Standard legal templates provided to all users
 const STANDARD_TEMPLATES: Template[] = [
