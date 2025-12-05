@@ -3,8 +3,8 @@
 import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
 import { Filter, Loader2 } from "lucide-react";
-import Header from "@/components/Header";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import Header from "../../components/Header";
+import { Card, CardContent, CardHeader, CardTitle } from "../../components/ui/card";
 import {
   Select,
   SelectContent,
@@ -12,7 +12,7 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
-import { Button } from "@/components/ui/button";
+import { Button } from "../../components/ui/button";
 import { Checkbox } from "@/components/ui/checkbox";
 import { useSession } from "@/lib/auth-client";
 import { toast } from "sonner";

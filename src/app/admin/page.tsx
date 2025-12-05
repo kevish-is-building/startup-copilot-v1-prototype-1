@@ -2,11 +2,11 @@
 
 import { useState, useEffect } from 'react';
 import { Settings, Save, RefreshCw } from 'lucide-react';
-import Header from '@/components/Header';
-import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
-import { Button } from '@/components/ui/button';
-import { Textarea } from '@/components/ui/textarea';
-import { useToast } from '@/hooks/use-toast';
+import Header from '../../components/Header';
+import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '../../components/ui/card';
+import { Button } from '../../components/ui/button';
+import { Textarea } from '../../components/ui/textarea';
+import { useToast } from '../../hooks/use-toast';
 
 export default function AdminPage() {
   const [loading, setLoading] = useState(true);

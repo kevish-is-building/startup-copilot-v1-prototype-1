@@ -3,8 +3,8 @@
 import Link from 'next/link';
 import { BookOpen, Clock, ArrowRight } from 'lucide-react';
 import { PlaybookArticle } from '@/lib/types';
-import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components/ui/card';
-import { Button } from '@/components/ui/button';
+import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from './ui/card';
+import { Button } from './ui/button';
 import { Badge } from '@/components/ui/badge';
 
 interface PlaybookCardProps {

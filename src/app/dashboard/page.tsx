@@ -17,9 +17,9 @@ import {
   Sparkles,
   Zap,
 } from "lucide-react";
-import Header from "@/components/Header";
-import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
+import Header from "../../components/Header";
+import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "../../components/ui/card";
+import { Button } from "../../components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { useSession } from "@/lib/auth-client";
 import type { AIRecommendationResponse, UserProfile } from "@/lib/types/ai";

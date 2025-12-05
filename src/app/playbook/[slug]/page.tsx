@@ -4,9 +4,9 @@ import { useEffect, useState } from 'react';
 import { useParams, useRouter } from 'next/navigation';
 import Link from 'next/link';
 import { ArrowLeft, Clock, BookOpen, Tag } from 'lucide-react';
-import Header from '@/components/Header';
-import { Card, CardContent } from '@/components/ui/card';
-import { Button } from '@/components/ui/button';
+import Header from '../../../components/Header';
+import { Card, CardContent } from '../../../components/ui/card';
+import { Button } from '../../../components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { PlaybookArticle } from '@/lib/types';
 

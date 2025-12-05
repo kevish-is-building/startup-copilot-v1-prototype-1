@@ -2,9 +2,9 @@
 
 import { useState, useEffect } from 'react';
 import { FileText, Search, Loader2 } from 'lucide-react';
-import Header from '@/components/Header';
+import Header from '../../components/Header';
 import TemplateCard from '@/components/TemplateCard';
-import { Card, CardContent } from '@/components/ui/card';
+import { Card, CardContent } from '../../components/ui/card';
 import { Input } from '@/components/ui/input';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
 import { Template } from '@/lib/types';

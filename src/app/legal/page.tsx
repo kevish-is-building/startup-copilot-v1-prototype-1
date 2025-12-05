@@ -2,10 +2,10 @@
 
 import { useState } from 'react';
 import { Scale, CheckCircle2, Circle, ExternalLink } from 'lucide-react';
-import Header from '@/components/Header';
-import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
+import Header from '../../components/Header';
+import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '../../components/ui/card';
 import { Checkbox } from '@/components/ui/checkbox';
-import { Button } from '@/components/ui/button';
+import { Button } from '../../components/ui/button';
 import Link from 'next/link';
 
 interface ChecklistItem {

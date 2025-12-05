@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { Button } from '@/components/ui/button';
+import { Button } from '../../components/ui/button';
 import { Rocket, CheckCircle2, Target, BookOpen, FileText, Scale } from 'lucide-react';
 
 export default function Home() {
