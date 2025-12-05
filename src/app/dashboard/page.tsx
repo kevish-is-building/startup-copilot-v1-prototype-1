@@ -22,7 +22,7 @@ import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "../..
 import { Button } from "../../components/ui/button";
 import { Badge } from "../../components/ui/badge";
 import { useSession } from "../../lib/auth-client";
-import type { AIRecommendationResponse, UserProfile } from "@/lib/types/ai";
+import type { AIRecommendationResponse, UserProfile } from "../../lib/types/ai";
 
 interface Startup {
   id: number;

@@ -1,8 +1,8 @@
 import { NextRequest, NextResponse } from 'next/server';
-import { prisma } from '@/lib/prisma';
-import { auth } from '@/lib/auth';
+import { prisma } from '../../../lib/prisma';
+import { auth } from '../../../lib/auth';
 
-import { generateBlueprint, BlueprintContent } from '@/lib/blueprint-generator';
+import { generateBlueprint, BlueprintContent } from '../../../lib/blueprint-generator';
 
 export async function POST(request: NextRequest) {
   try {

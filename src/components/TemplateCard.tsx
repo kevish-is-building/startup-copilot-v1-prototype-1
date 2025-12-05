@@ -1,7 +1,7 @@
 "use client"
 
 import { Download, FileText } from 'lucide-react';
-import { Template } from '@/lib/types';
+import { Template } from '../lib/types';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from './ui/card';
 import { Button } from './ui/button';
 import { Badge } from '../components/ui/badge';

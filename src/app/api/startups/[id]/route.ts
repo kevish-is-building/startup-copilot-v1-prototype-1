@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server';
-import { prisma } from '@/lib/prisma';
-import { auth } from '@/lib/auth';
+import { prisma } from '../../../../lib/prisma';
+import { auth } from '../../../../lib/auth';
 
 const VALID_INDUSTRIES = ['food', 'saas', 'consumer', 'healthcare', 'fintech', 'edtech'];
 const VALID_STAGES = ['ideation', 'mvp', 'growth'];
